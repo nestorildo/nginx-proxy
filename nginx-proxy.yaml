@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   nginx-proxy:
-    container-name: nginx-proxy
+    container_name: nginx-proxy
     image: jwilder/nginx-proxy:alpine
     restart: always
     ports:

@@ -39,4 +39,4 @@ volumes:
   vhostd:
 networks:
   proxy:
-    - name: proxy
+    - name:proxy

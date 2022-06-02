@@ -2,6 +2,7 @@ version: '3'
 
 services:
   nginx-proxy:
+    container-name: nginx-proxy
     image: jwilder/nginx-proxy:alpine
     restart: always
     ports:
@@ -18,6 +19,7 @@ services:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
 
   letsencrypt:
+    container_name: letsencrypt
     image: jrcs/letsencrypt-nginx-proxy-companion
     restart: always
     networks:
@@ -37,4 +39,4 @@ volumes:
   vhostd:
 networks:
   proxy:
-    name: proxy
+    -name: proxy
